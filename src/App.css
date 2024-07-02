@@ -1,3 +1,10 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
   padding: 20px;
@@ -9,14 +16,80 @@ form {
 
 .captions {
   position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  margin-top: 30px;
-  text-align: center;
+  bottom: 60px;
+  left: 50%;
+  margin-bottom: 40px;
+  transform: translateX(-50%);
   color: white;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+  height: 20px;
+  transition: opacity 0.3s ease-in-out; 
+  text-align: center;
 }
+
+.active {
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.react-player {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.play-pause-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-pause-button:hover {
+  background-color: #2980b9;
+}
+
+.caption-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.caption-form input[type="text"],
+.caption-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.caption-form input[type="text"]:focus,
+.caption-form button:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.caption-form button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.caption-form button:hover {
+  background-color: #2980b9;
+} 

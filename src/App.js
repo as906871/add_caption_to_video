@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <CaptionForm />
           <VideoPlayer />
-          <CaptionDisplay />
+          {/* <CaptionDisplay /> */}
           <StateLogger />
         </div>
     </Provider>

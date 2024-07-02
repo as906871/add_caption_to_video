@@ -21,7 +21,7 @@ const VideoPlayer = () => {
     };
   
     return (
-      <div>
+      <div className='video-container'>
         <ReactPlayer
           className="react-player"
           url={url}
@@ -32,7 +32,7 @@ const VideoPlayer = () => {
           onError={handleError}
           onProgress={handleProgress}
         />
-        <button onClick={handlePlayPause}>{isPlaying ? 'Pause' : 'Play'}</button>
+        <button className='play-pause-button' onClick={handlePlayPause}>{isPlaying ? 'Pause' : 'Play'}</button>
         <CaptionDisplay />
       </div>
     );

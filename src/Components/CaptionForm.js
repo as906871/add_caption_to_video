@@ -29,7 +29,7 @@ const CaptionForm = () => {
     };
   
     return (
-      <div>
+      <div className='caption-form'>
         <div>
           <input
             type="text"

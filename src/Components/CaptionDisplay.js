@@ -10,15 +10,14 @@ const CaptionDisplay = () => {
 
   const currentCaption = captions.captions.find((caption) => {
     console.log(`Comparing currentTime: ${currentTime} with caption timestamp: ${caption.timestamp}`);
-    return currentTime >= caption.timestamp && currentTime < caption.timestamp + 5;
+    return currentTime >= caption.timestamp && currentTime < caption.timestamp +1;
   });
 
   console.log('currentCaption', currentCaption);
 
   return (
-    <div className="captions" style={{ marginTop: "100px", height: "80px" }}>
+    <div className="captions">
       {currentCaption && (
-        console.log("captioning", currentCaption),
         <div className="active" style={{ color: "white" }}>
           {currentCaption.text}
         </div>
